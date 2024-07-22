@@ -1,0 +1,8 @@
+{
+  "mainnet": {
+    "MahaToken": {
+      "address": "0x745407c86df8db893011912d3ab28e68b62e49b0",
+      "startBlock": 12
+    }
+  }
+}

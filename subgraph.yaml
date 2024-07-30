@@ -5,40 +5,22 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: MahaToken
+    name: erc20
     network: mainnet
     source:
-      address: "0x745407c86df8db893011912d3ab28e68b62e49b0"
-      abi: MahaToken
-      startBlock: 16345371
+      address: "0x6900057428C99Fb373397D657Beb40D92D8aC97f"
+      abi: erc20
+      startBlock: 20372721
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - Approval
-        - Paused
-        - RoleAdminChanged
-        - RoleGranted
-        - RoleRevoked
-        - Transfer
-        - Unpaused
+        - TokenBalance
       abis:
-        - name: MahaToken
-          file: ./abis/MahaToken.json
+        - name: erc20
+          file: ./abis/erc20.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
-        - event: Paused(address)
-          handler: handlePaused
-        - event: RoleAdminChanged(indexed bytes32,indexed bytes32,indexed bytes32)
-          handler: handleRoleAdminChanged
-        - event: RoleGranted(indexed bytes32,indexed address,indexed address)
-          handler: handleRoleGranted
-        - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
-          handler: handleRoleRevoked
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: Unpaused(address)
-          handler: handleUnpaused
-      file: ./src/maha-token.ts
+      file: ./src/erc20balance.ts

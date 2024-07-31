@@ -12,3 +12,7 @@ export function handleTransferSUSDZ(event: TransferEvent): void {
 export function handleTransferMAHA(event: TransferEvent): void {
     handleTransferEvent(event, "maha");
 }
+
+export function handleTransferSZAIFRAXBP(event: TransferEvent): void {
+  handleTransferEvent(event, "szaifraxbp");
+}

@@ -3,4 +3,5 @@ type TokenBalance @entity {
   usdz: BigInt!
   susdz: BigInt!
   maha: BigInt!
+  szaifraxbp: BigInt!
 }

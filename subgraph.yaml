@@ -50,7 +50,7 @@ dataSources:
     source:
       address: "0x745407c86DF8DB893011912d3aB28e68B62E49B0"
       abi: erc20
-      startBlock: 16793769
+      startBlock: 16345371
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -63,4 +63,24 @@ dataSources:
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferMAHA
+      file: ./src/erc20balance.ts
+  - kind: ethereum
+    name: szaifraxbp
+    network: mainnet
+    source:
+      address: "0x6900066D9F8DF0bfaF1E25Ef89c0453e8e12373d"
+      abi: erc20
+      startBlock: 20419459
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - TokenBalance
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferSZAIFRAXBP
       file: ./src/erc20balance.ts

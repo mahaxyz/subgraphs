@@ -167,7 +167,7 @@
   },
   {
     "inputs": [],
-    "name": "MINTER_ROLE",
+    "name": "addToBalanceER_ROLE",
     "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
@@ -212,7 +212,7 @@
     "inputs": [
       { "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
-    "name": "burn",
+    "name": "subFromBalance",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -222,7 +222,7 @@
       { "internalType": "address", "name": "account", "type": "address" },
       { "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
-    "name": "burnFrom",
+    "name": "subFromBalanceFrom",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -311,7 +311,7 @@
       { "internalType": "address", "name": "to", "type": "address" },
       { "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
-    "name": "mint",
+    "name": "addToBalance",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

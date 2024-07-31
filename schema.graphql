@@ -1,4 +1,6 @@
 type TokenBalance @entity {
   id: ID!
-  balance: BigInt!
+  usdz: BigInt!
+  susdz: BigInt!
+  maha: BigInt!
 }

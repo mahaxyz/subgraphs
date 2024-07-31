@@ -1,30 +1,14 @@
 import { Transfer as TransferEvent } from "../generated/erc20/erc20";
-import { TokenBalance } from "../generated/schema";
+import { handleTransferEvent } from "./helper";
 
-export function handleTransfer(event: TransferEvent): void {
-  if (
-    event.params.to.toHexString() ===
-    "0x0000000000000000000000000000000000000000"
-  ) {
-    let tokenBalance = TokenBalance.load(event.params.from.toHexString());
-    if (!tokenBalance) {
-      tokenBalance = new TokenBalance(event.params.from.toHexString());
-      tokenBalance.balance = event.params.value;
-    } else {
-      tokenBalance.balance = tokenBalance.balance.minus(event.params.value);
-    }
-    tokenBalance.save();
-  } else if (
-    event.params.from.toHexString() ===
-    "0x0000000000000000000000000000000000000000"
-  ) {
-    let tokenBalance = TokenBalance.load(event.params.to.toHexString());
-    if (!tokenBalance) {
-      tokenBalance = new TokenBalance(event.params.to.toHexString());
-      tokenBalance.balance = event.params.value;
-    } else {
-      tokenBalance.balance = tokenBalance.balance.plus(event.params.value);
-    }
-    tokenBalance.save();
-  }
+export function handleTransferUSDZ(event: TransferEvent): void {
+  handleTransferEvent(event, "usdz");
+}
+
+export function handleTransferSUSDZ(event: TransferEvent): void {
+    handleTransferEvent(event, "susdz");
+}
+
+export function handleTransferMAHA(event: TransferEvent): void {
+    handleTransferEvent(event, "maha");
 }

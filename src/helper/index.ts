@@ -10,9 +10,9 @@ function updateBalance(
   amount: BigInt,
   subtract: boolean
 ): void {
-  if (address.toHexString() === ZeroAddress) {
-    return
-  }
+  // if (address.toHexString() === ZeroAddress) {
+  //   return
+  // }
   let tokenBalance = TokenBalance.load(address.toHexString());
   if (!tokenBalance) {
     tokenBalance = new TokenBalance(address.toHexString());
@@ -32,9 +32,9 @@ function updateBalance(
       tokenBalance.maha = tokenBalance.maha.minus(amount);
     else if (token === "szaifraxbp")
       tokenBalance.szaifraxbp = tokenBalance.szaifraxbp.minus(amount);
-    else if (token === "szaifraxbp")
+    else if (token === "susdzusdc")
       tokenBalance.susdzusdc = tokenBalance.susdzusdc.minus(amount);
-    else if (token === "szaifraxbp")
+    else if (token === "smahausdz")
       tokenBalance.smahausdz = tokenBalance.smahausdz.minus(amount);
   } else {
     if (token === "usdz") tokenBalance.usdz = tokenBalance.usdz.plus(amount);
@@ -44,9 +44,9 @@ function updateBalance(
       tokenBalance.maha = tokenBalance.maha.plus(amount);
     else if (token === "szaifraxbp")
       tokenBalance.szaifraxbp = tokenBalance.szaifraxbp.plus(amount);
-    else if (token === "szaifraxbp")
+    else if (token === "susdzusdc")
       tokenBalance.susdzusdc = tokenBalance.susdzusdc.plus(amount);
-    else if (token === "szaifraxbp")
+    else if (token === "smahausdz")
       tokenBalance.smahausdz = tokenBalance.smahausdz.plus(amount);
   }
 

@@ -4,6 +4,6 @@ type TokenBalance @entity {
   susdz: BigInt!
   maha: BigInt!
   szaifraxbp: BigInt!
-  sUSDzUSDC: BigInt!
-  sMAHAUSDz: BigInt!
+  susdzusdc: BigInt!
+  smahausdz: BigInt!
 }

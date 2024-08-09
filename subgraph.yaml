@@ -102,7 +102,7 @@ dataSources:
           file: ./abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransferSZAIFRAXBP
+          handler: handleTransferSUSDZUSDC
       file: ./src/erc20balance.ts
   - kind: ethereum
     name: sMAHAUSDz
@@ -122,6 +122,5 @@ dataSources:
           file: ./abis/erc20.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransferSZAIFRAXBP
+          handler: handleTransferSMAHAUSDZ
       file: ./src/erc20balance.ts
-  

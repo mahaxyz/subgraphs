@@ -84,3 +84,44 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferSZAIFRAXBP
       file: ./src/erc20balance.ts
+  - kind: ethereum
+    name: sUSDzUSDC
+    network: mainnet
+    source:
+      address: "0x154F52B347D8E48b8DbD8D8325Fe5bb45AAdCCDa"
+      abi: erc20
+      startBlock: 20464759
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - TokenBalance
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferSZAIFRAXBP
+      file: ./src/erc20balance.ts
+  - kind: ethereum
+    name: sMAHAUSDz
+    network: mainnet
+    source:
+      address: "0x237efE587f2cB44597063DC8403a4892a60A5a4f"
+      abi: erc20
+      startBlock: 20464774
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - TokenBalance
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferSZAIFRAXBP
+      file: ./src/erc20balance.ts
+  

@@ -16,3 +16,11 @@ export function handleTransferMAHA(event: TransferEvent): void {
 export function handleTransferSZAIFRAXBP(event: TransferEvent): void {
   handleTransferEvent(event, "szaifraxbp");
 }
+
+export function handleTransferSUSDZUSDC(event: TransferEvent): void {
+  handleTransferEvent(event, "sUSDzUSDC");
+}
+
+export function handleTransferSMAHAUSDZ(event: TransferEvent): void {
+  handleTransferEvent(event, "sMAHAUSDz");
+}

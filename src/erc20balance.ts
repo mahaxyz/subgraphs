@@ -1,26 +1,30 @@
-import { Transfer as TransferEvent } from "../generated/erc20/erc20";
+import { Transfer as TransferEvent } from "../generated/MAHA/erc20";
 import { handleTransferEvent } from "./helper";
 
-export function handleTransferUSDZ(event: TransferEvent): void {
-  handleTransferEvent(event, "usdz");
+export function handleTransferZAI(event: TransferEvent): void {
+  handleTransferEvent(event, "zai");
 }
 
-export function handleTransferSUSDZ(event: TransferEvent): void {
-    handleTransferEvent(event, "susdz");
+export function handleTransferSZAI(event: TransferEvent): void {
+    handleTransferEvent(event, "szai");
 }
 
 export function handleTransferMAHA(event: TransferEvent): void {
     handleTransferEvent(event, "maha");
 }
 
-export function handleTransferSZAIFRAXBP(event: TransferEvent): void {
-  handleTransferEvent(event, "szaifraxbp");
+export function handleTransferSZAISZAI(event: TransferEvent): void {
+  handleTransferEvent(event, "szaiszai");
 }
 
-export function handleTransferSUSDZUSDC(event: TransferEvent): void {
-  handleTransferEvent(event, "susdzusdc");
+export function handleTransferSZAIUSDC(event: TransferEvent): void {
+  handleTransferEvent(event, "sszaiusdc");
 }
 
-export function handleTransferSMAHAUSDZ(event: TransferEvent): void {
-  handleTransferEvent(event, "smahausdz");
+export function handleTransferSMAHAZAI(event: TransferEvent): void {
+  handleTransferEvent(event, "smahaszai");
+}
+
+export function handleTransferMAHAXVP(event: TransferEvent): void {
+  handleTransferEvent(event, "mahaxvp");
 }

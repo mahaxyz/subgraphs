@@ -1,9 +1,26 @@
 type TokenBalance @entity {
   id: ID!
-  usdz: BigInt!
-  susdz: BigInt!
-  maha: BigInt!
-  szaifraxbp: BigInt!
-  susdzusdc: BigInt!
-  smahausdz: BigInt!
+  zai: BigInt
+  szai: BigInt
+  maha: BigInt
+  szaiszai: BigInt
+  szaiusdc: BigInt
+  smahazai: BigInt
+  mahaxvp: BigInt
+}
+
+type Mint @entity {
+  id: ID!
+  zai: BigInt
+}
+
+type TokenRate @entity {
+  id: ID!
+  zai: BigDecimal
+  szai: BigDecimal
+  maha: BigDecimal
+  szaiszai: BigDecimal
+  szaiusdc: BigDecimal
+  smahazai: BigDecimal
+  mahaxvp_boost: BigDecimal
 }

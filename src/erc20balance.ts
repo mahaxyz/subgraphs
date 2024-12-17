@@ -18,11 +18,11 @@ export function handleTransferSZAISZAI(event: TransferEvent): void {
 }
 
 export function handleTransferSZAIUSDC(event: TransferEvent): void {
-  handleTransferEvent(event, "sszaiusdc");
+  handleTransferEvent(event, "szaiusdc");
 }
 
 export function handleTransferSMAHAZAI(event: TransferEvent): void {
-  handleTransferEvent(event, "smahaszai");
+  handleTransferEvent(event, "szaimaha");
 }
 
 export function handleTransferMAHAXVP(event: TransferEvent): void {

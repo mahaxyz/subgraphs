@@ -6,7 +6,7 @@ assetDenomination.set("szai", BigInt.fromI32(10).pow(18));
 assetDenomination.set("maha", BigInt.fromI32(10).pow(18));
 assetDenomination.set("szaiszai", BigInt.fromI32(10).pow(18));
 assetDenomination.set("szaiusdc", BigInt.fromI32(10).pow(18));
-assetDenomination.set("smahazai", BigInt.fromI32(10).pow(18));
+assetDenomination.set("szaimaha", BigInt.fromI32(10).pow(18));
 
 
 export const minAmount = BigDecimal.fromString("0");

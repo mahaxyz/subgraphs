@@ -85,7 +85,7 @@ dataSources:
           handler: handleTransferSZAISZAI
       file: ./src/erc20balance.ts
   - kind: ethereum
-    name: sZAIUSDC
+    name: sZAIUSDC # not working
     network: mainnet
     source:
       address: "0xdFB06C4c562Bcc810C112FBAC99c59C2856b86D1"
@@ -105,7 +105,7 @@ dataSources:
           handler: handleTransferSZAIUSDC
       file: ./src/erc20balance.ts
   - kind: ethereum
-    name: sZAIMAHA
+    name: sZAIMAHA # not working
     network: mainnet
     source:
       address: "0xE2EbBf803d0199A5A26108bA36FBAc366b201Be1"

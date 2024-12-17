@@ -5,7 +5,7 @@ type TokenBalance @entity {
   maha: BigInt
   szaiszai: BigInt
   szaiusdc: BigInt
-  smahazai: BigInt
+  szaimaha: BigInt
   mahaxvp: BigInt
 }
 
@@ -21,6 +21,6 @@ type TokenRate @entity {
   maha: BigDecimal
   szaiszai: BigDecimal
   szaiusdc: BigDecimal
-  smahazai: BigDecimal
+  szaimaha: BigDecimal
   mahaxvp_boost: BigDecimal
 }

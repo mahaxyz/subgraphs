@@ -1,3 +1,4 @@
+import { log } from "@graphprotocol/graph-ts";
 import { Transfer as TransferEvent } from "../../generated/MAHA/erc20";
 import { addToBalance, subFromBalance, transfer } from "./balance";
 import { zaiMinted } from "./zaiMint";
@@ -12,13 +13,13 @@ export function handleTransferEvent(
   const to = event.params.to;
   const value = event.params.value;
 
-  if (from.toHexString() === ZeroAddress) {
+  if (from.toHexString() == ZeroAddress) {
     // mint
-    addToBalance(to, symbol, value);
     if (symbol === "zai") {
       zaiMinted(to, value);
     }
-  } else if (to.toHexString() === ZeroAddress) {
+    addToBalance(to, symbol, value);
+  } else if (to.toHexString() == ZeroAddress) {
     // burn
     subFromBalance(from, symbol, value);
   } else {

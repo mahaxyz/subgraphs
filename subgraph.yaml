@@ -17,6 +17,8 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - Mint
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -37,6 +39,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -57,6 +60,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -77,6 +81,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -97,6 +102,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -117,6 +123,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json
@@ -137,6 +144,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - TokenBalance
+        - TokenRate
       abis:
         - name: erc20
           file: ./abis/erc20.json

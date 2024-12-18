@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: ZAI
-    network: mainnet
+    network: base
     source:
       address: "0x69000dFD5025E82f48Eb28325A2B88a241182CEd"
       abi: erc20
-      startBlock: 21213295
+      startBlock: 22563470
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -28,11 +28,11 @@ dataSources:
       file: ./src/erc20balance.ts
   - kind: ethereum
     name: sZAI
-    network: mainnet
+    network: base
     source:
       address: "0x69000195D5e3201Cf73C9Ae4a1559244DF38D47C"
       abi: erc20
-      startBlock: 21248652
+      startBlock: 22956272
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -49,11 +49,11 @@ dataSources:
       file: ./src/erc20balance.ts
   - kind: ethereum
     name: MAHA
-    network: mainnet
+    network: base
     source:
-      address: "0x745407c86df8db893011912d3ab28e68b62e49b0"
+      address: "0x554bba833518793056CF105E66aBEA330672c0dE"
       abi: erc20
-      startBlock: 16345371
+      startBlock: 18666034 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -69,33 +69,12 @@ dataSources:
           handler: handleTransferMAHA
       file: ./src/erc20balance.ts
   - kind: ethereum
-    name: sZAIsZAI
-    network: mainnet
-    source:
-      address: "0xfDAeB792FF19e7bd4f7ED5d6ce2ef7925d002A19"
-      abi: erc20
-      startBlock: 21271746
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.7
-      language: wasm/assemblyscript
-      entities:
-        - TokenBalance
-        - TokenRate
-      abis:
-        - name: erc20
-          file: ./abis/erc20.json
-      eventHandlers:
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransferSZAISZAI
-      file: ./src/erc20balance.ts
-  - kind: ethereum
     name: sZAIUSDC # not working
-    network: mainnet
+    network: base
     source:
-      address: "0xdFB06C4c562Bcc810C112FBAC99c59C2856b86D1"
+      address: "0xD87ECeF739161be77bbe9891dBA80F14275BBE34"
       abi: erc20
-      startBlock: 21271725
+      startBlock: 22917933
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -112,11 +91,11 @@ dataSources:
       file: ./src/erc20balance.ts
   - kind: ethereum
     name: sZAIMAHA # not working
-    network: mainnet
+    network: base
     source:
-      address: "0xE2EbBf803d0199A5A26108bA36FBAc366b201Be1"
+      address: "0xe77b404e934c1d97f179061349F459847f70Cd8C"
       abi: erc20
-      startBlock: 21271762
+      startBlock: 22917809
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -131,24 +110,4 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferSMAHAZAI
       file: ./src/erc20balance.ts
-  - kind: ethereum
-    name: MAHAXvp
-    network: mainnet
-    source:
-      address: "0x608917F8392634428Ec71C6766F3eC3f5cc8f421"
-      abi: erc20
-      startBlock: 15373259
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.7
-      language: wasm/assemblyscript
-      entities:
-        - TokenBalance
-        - TokenRate
-      abis:
-        - name: erc20
-          file: ./abis/erc20.json
-      eventHandlers:
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransferMAHAXVP
-      file: ./src/erc20balance.ts
+
